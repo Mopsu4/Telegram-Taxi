@@ -256,10 +256,6 @@ class SQLighter:
 			return self.cursor.execute("SELECT time_minus FROM `subscriptions` WHERE `status` = ? AND night = ? AND status_car = ?", (status, night, status_car )).fetchall()
 
 
-	def shange_all_night_off(self, night = 0):
-		with self.connection:
-			return self.cursor.execute("UPDATE `subscriptions` SET `night` = ? ", (night, ))
-
 
 
 	
